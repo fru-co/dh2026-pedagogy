@@ -200,21 +200,6 @@ figcaption {
   color: var(--muted);
 }
 
-.tools-preview {
-  margin: 56px 0 0;
-}
-
-.tools-preview img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 1px solid var(--rule);
-}
-
-.tools-preview figcaption {
-  padding-top: 10px;
-}
-
 footer {
   padding: 30px 0;
   color: var(--white);
