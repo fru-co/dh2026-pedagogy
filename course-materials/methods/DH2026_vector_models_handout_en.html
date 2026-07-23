@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Research methods handout from How to Go Digital in American Literary Studies.">
+    <title>Vector Models for Literary Research | DH 2026</title>
+    <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../../styles.css">
+  </head>
+  <body class="document-body course-document">
+    <header class="document-header">
+      <div class="document-header-inner">
+        <a class="back-link" href="../../index.html">&larr; Back to poster resources</a>
+        <p>Research methods handout</p>
+      </div>
+    </header>
+    <main class="document-main">
+      <article class="markdown-body">
+<h1>Vector Models for Literary Research</h1>
+<h2>From Exact Matches to Semantic Relationships</h2>
+<p>Exact word searches and vector models answer different questions. An N-gram, concordance, or keyword search begins with repeated strings: the same word, spelling, phrase, or quotation. A vector model represents words or passages as lists of numbers and compares their positions in a vector space.</p>
+<p>Use exact search when wording and frequency matter. Use vectors when you want to explore related words, similar contexts, or patterns that may not share the same vocabulary. Neither method is inherently better; the research question determines which one is useful.</p>
+<h2>1. Core Concepts</h2>
+<ul>
+<li><strong>Vector:</strong> a list of numbers representing a word or text.</li>
+<li><strong>Vector space:</strong> the coordinate-like space in which those representations are compared.</li>
+<li><strong>Cosine similarity:</strong> a measure of how closely two vectors point in the same direction.</li>
+<li><strong>Training corpus:</strong> the collection of texts from which a model learns its relationships.</li>
+</ul>
+<p>A nearby word is not necessarily a dictionary synonym. It is a word that tended to appear in similar contexts in the model's training corpus. Results therefore reflect the corpus, period, genre, preprocessing choices, and model design.</p>
+<h2>2. Static Word-Vector Models</h2>
+<p>Static models assign one vector to each word. The vector does not change from sentence to sentence, so different senses of a word such as <code>bank</code> are combined into one representation.</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Basic idea</th>
+<th>Useful feature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Word2Vec</td>
+<td>Learns a word from the words that surround it</td>
+<td>Efficiently models local contextual relationships</td>
+</tr>
+<tr>
+<td>GloVe</td>
+<td>Learns from corpus-wide word co-occurrence statistics</td>
+<td>Provides accessible pretrained models for exploration</td>
+</tr>
+<tr>
+<td>fastText</td>
+<td>Represents a word partly through character N-grams</td>
+<td>Helps with rare words and morphological variation</td>
+</tr>
+<tr>
+<td>HistWords</td>
+<td>Provides decade-specific word vectors</td>
+<td>Supports the study of historical semantic change</td>
+</tr>
+</tbody>
+</table>
+<p>The principle behind all four is distributional: words used in similar contexts tend to receive similar representations.</p>
+<h2>3. Word Vector Explorer</h2>
+<p><strong>Word Vector Explorer</strong> introduces static word vectors through pretrained models such as <code>glove-wiki-gigaword-50</code>. In the app, you can examine:</p>
+<ul>
+<li><strong>Nearby Words:</strong> words closest to a target word.</li>
+<li><strong>Word-Pair Similarity:</strong> the relative proximity of two words.</li>
+<li><strong>Model Comparison:</strong> changes produced by different corpora or dimensions.</li>
+<li><strong>Vector Arithmetic:</strong> exploratory combinations such as <code>king + woman - man</code>.</li>
+</ul>
+<p>When reading the output, first look for groups of related words. Then check the model and training corpus. Finally, test the pattern against dictionary definitions, concordance lines, and passages from the literary text.</p>
+<h2>4. HistWords Explorer</h2>
+<p><strong>HistWords Explorer</strong> adds time and corpus selection to word-vector analysis. Instead of treating a word as historically stable, it allows you to compare its nearest neighbors or its similarity to another word across decades.</p>
+<p>Possible questions include:</p>
+<ul>
+<li>Which words are near <code>moral</code> in different decades?</li>
+<li>Does the relationship between <code>moral</code> and <code>religious</code> change over time?</li>
+<li>Do general English and fiction corpora produce different neighborhoods?</li>
+</ul>
+<p>A changing neighborhood may suggest a shift in usage, but it does not demonstrate semantic change by itself. Corpus composition, word frequency, OCR quality, and model alignment may also affect the result.</p>
+<h2>5. A Research Workflow</h2>
+<ol>
+<li>Begin with a word, passage, or interpretive question from the literary text.</li>
+<li>Use frequency and concordance tools to establish exact usage.</li>
+<li>Use Word Vector Explorer or HistWords Explorer to identify related words or changing relationships.</li>
+<li>Record the model, corpus, decade, target word, and comparison settings.</li>
+<li>Select a small number of patterns worth investigating.</li>
+<li>Return to dated examples, historical dictionaries, corpus contexts, and the literary text.</li>
+<li>Distinguish the model's output from your interpretation of that output.</li>
+</ol>
+<h2>6. How to Report a Result</h2>
+<p>Avoid writing, “The model proves that these words have the same meaning.” A more accurate formulation is:</p>
+<blockquote>
+<p>In the <code>_____</code> model or corpus, <code>_____</code> appeared near <code>_____</code> during <code>_____</code>. This pattern suggests <code>_____</code>, but examples from <code>_____</code> show that <code>_____</code>.</p>
+</blockquote>
+<p>Record enough information for another reader to reproduce the search:</p>
+<ul>
+<li>target word or word pair;</li>
+<li>model and training corpus;</li>
+<li>decade or date range, when applicable;</li>
+<li>number of neighbors or similarity measure;</li>
+<li>relevant output and passages checked afterward;</li>
+<li>limitations or alternative explanations.</li>
+</ul>
+<h2>7. Main Cautions</h2>
+<ul>
+<li>Similarity is a model-generated relationship, not a fact about language.</li>
+<li>A high score does not explain why two words or passages are related.</li>
+<li>Static models combine multiple senses into one word vector.</li>
+<li>Models inherit omissions and biases from their training corpora.</li>
+<li>Quantitative patterns are starting points for interpretation, not conclusions.</li>
+</ul>
+<h2>References</h2>
+<ul>
+<li>Tomas Mikolov et al. 2013. <a href="https://arxiv.org/abs/1301.3781">“Efficient Estimation of Word Representations in Vector Space.”</a></li>
+<li>Jeffrey Pennington, Richard Socher, and Christopher Manning. 2014. <a href="https://aclanthology.org/D14-1162/">“GloVe: Global Vectors for Word Representation.”</a> <a href="https://nlp.stanford.edu/projects/glove/">GloVe project page.</a></li>
+<li>William L. Hamilton, Jure Leskovec, and Dan Jurafsky. 2016. <a href="https://aclanthology.org/P16-1141/">“Diachronic Word Embeddings Reveal Statistical Laws of Semantic Change.”</a> <a href="https://nlp.stanford.edu/projects/histwords/">HistWords project page.</a></li>
+</ul>
+      </article>
+    </main>
+    <footer class="document-footer">
+      <p>DH 2026 | Kohei Furuya | Aoyama Gakuin University</p>
+    </footer>
+  </body>
+</html>

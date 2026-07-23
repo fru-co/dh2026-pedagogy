@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Instructor-run AI experiment from How to Go Digital in American Literary Studies.">
+    <title>DH2026 AI Final Paper Experiment: Conditions Memo | DH 2026</title>
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body class="document-body ai-document">
+    <header class="document-header">
+      <div class="document-header-inner">
+        <a class="back-link" href="../index.html">&larr; Back to poster resources</a>
+        <p>Instructor-run AI experiment</p>
+      </div>
+    </header>
+    <main class="document-main">
+      <article class="markdown-body">
+<h1>DH2026 AI Final Paper Experiment: Conditions Memo</h1>
+<p>This memo records the conditions under which two AI-generated final papers were produced with Claude Code. The experiment asks what changes when an AI moves from describing plausible tool results to executing the underlying analyses.</p>
+<h2>1. Date</h2>
+<p>Both versions were produced on July 10, 2026, during the same working session.</p>
+<h2>2. AI System</h2>
+<ul>
+<li>Model recorded for the experiment: <strong>Claude Fable 5</strong> (<code>claude-fable-5</code>, Anthropic)</li>
+<li>Reasoning effort: <strong>medium</strong></li>
+<li>Environment: <strong>Claude Code</strong>, with file access and Python execution available</li>
+<li>Recorded knowledge cutoff: January 2026</li>
+</ul>
+<p>The instructor supplied the prompts but did not contribute to the close reading, interpretation, or prose of either paper.</p>
+<h2>3. Shared Assignment and Materials</h2>
+<p>Both versions were asked to follow the <a href="../course-materials/assignments/DH2026_final_paper_prompt_en.html">Final Paper Assignment</a> and could consult the course syllabus, weekly handouts, and research-methods handouts.</p>
+<p>Both compare:</p>
+<ul>
+<li>Washington Irving, “The Devil and Tom Walker” (1824)</li>
+<li>Nathaniel Hawthorne, “Ethan Brand” (1850)</li>
+</ul>
+<p>The two papers share the same comparative question about the externalization and internalization of sin so that their analytical claims can be compared directly.</p>
+<h2>4. Version 1: No Tools Executed</h2>
+<p><a href="DH2026_AI_report_Claude_Code_v1_no_tools_simulated_EN.html">Version 1</a> was generated from the course materials without access to the course text files or analytical tools. The AI relied on its trained knowledge of the public-domain works.</p>
+<p>No frequency analysis, KWIC search, word-vector query, HistWords calculation, or SBERT search was executed. Every tool result in the paper is a plausible fabrication.</p>
+<p>This version tests whether an AI can imitate the appearance of a methodologically complete student paper without producing verifiable analytical evidence.</p>
+<h2>5. Version 2: Tools Executed</h2>
+<p><a href="DH2026_AI_report_Claude_Code_v2_tools_executed_EN.html">Version 2</a> was allowed to use the eleven course texts, pretrained HistWords vectors, precomputed SBERT Text Lab embeddings, and locally available Python libraries.</p>
+<p>The AI executed:</p>
+<ul>
+<li>frequency counts with a stopword list;</li>
+<li>selected-word counts;</li>
+<li>distribution across ten equal text segments;</li>
+<li>KWIC concordances with sixty characters of context;</li>
+<li>HistWords nearest-neighbor searches for <code>bargain</code>, <code>sin</code>, <code>heart</code>, and <code>gold</code> in selected decades;</li>
+<li>five SBERT queries encoded with <code>all-MiniLM-L6-v2</code>, compared with precomputed sentence embeddings and filtered by literary work.</li>
+</ul>
+<p>The frequency, distribution, and KWIC calculations reproduced the type of analysis practiced in the course, but the AI used scripts rather than operating the DH Reading Lab or Voyant Tools interfaces. The HistWords and SBERT analyses used the same underlying models and data prepared for the course apps.</p>
+<h2>6. What the Executed Data Changed</h2>
+<p>The executed results repeatedly contradicted Version 1’s plausible fabrications:</p>
+<ol>
+<li>Version 1 described KWIC results for <code>soul</code> in Irving, but the word occurs zero times in the course text.</li>
+<li>Version 1 treated <code>gold</code> as a high-frequency term in Irving, but it occurs only twice; <code>money</code> and the phrase “black man” carry more of the transactional vocabulary.</li>
+<li>Version 1 described a simple secularization of the neighbors of <code>sin</code>; the installed fiction vectors instead placed affective terms near <code>sin</code> in the 1850s and somewhat more ecclesiastical terms near it in the 1890s.</li>
+<li>Version 1 claimed that one SBERT query retrieved the Esther passage in Hawthorne; the executed version found that passage only with a different query about psychological experimentation.</li>
+<li>Central observations in Version 2—including the equal counts of <code>sin</code> and <code>kiln</code> in Hawthorne and the retrieval of usury sentences by a soul-exchange query—depended on actual computation.</li>
+</ol>
+<h2>7. Implications for Assessment</h2>
+<p>Version 1 shows that a fully outsourced paper can imitate the form of a careful workflow while inventing evidence. Version 2 shows that an AI can also produce verifiable computational outputs and a plausible workflow log.</p>
+<p>The presence of a log is therefore not enough to establish student authorship. The more important question is who made and can explain the interpretive decisions connecting tool output to literary evidence.</p>
+<h2>8. Caveats</h2>
+<ul>
+<li>Neither version includes human close reading or interpretation.</li>
+<li>In Version 2, the AI reproduced equivalent computations rather than operating the classroom GUIs themselves.</li>
+<li>The AI may have encountered both public-domain works in its training data; not supplying text files does not mean the works were unknown to the model.</li>
+<li>Scripts and raw outputs are retained in the instructor’s local experiment archive but are not part of this public resource site.</li>
+</ul>
+<p>Both public papers begin with an AI-use note that states these conditions explicitly.</p>
+      </article>
+    </main>
+    <footer class="document-footer">
+      <p>DH 2026 | Kohei Furuya | Aoyama Gakuin University</p>
+    </footer>
+  </body>
+</html>

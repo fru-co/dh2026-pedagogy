@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Research methods handout from How to Go Digital in American Literary Studies.">
+    <title>Transformers, BERT, SBERT, and Historical BERT | DH 2026</title>
+    <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../../styles.css">
+  </head>
+  <body class="document-body course-document">
+    <header class="document-header">
+      <div class="document-header-inner">
+        <a class="back-link" href="../../index.html">&larr; Back to poster resources</a>
+        <p>Research methods handout</p>
+      </div>
+    </header>
+    <main class="document-main">
+      <article class="markdown-body">
+<h1>Transformers, BERT, SBERT, and Historical BERT</h1>
+<h2>From Static Words to Contextual Passages</h2>
+<p>Static word-vector models such as Word2Vec and GloVe assign one vector to each word. This is useful for comparing vocabulary, but it combines different senses into a single representation. The word <code>bank</code>, for example, receives the same vector whether it refers to money or a river.</p>
+<p>Contextual models build a representation after reading the surrounding passage. The same word can therefore receive different vectors in different sentences. This shift—from a fixed word representation to a context-dependent one—is central to BERT and later language models.</p>
+<h2>1. The Transformer</h2>
+<p>The <strong>Transformer</strong> is a neural-network architecture introduced in 2017. Its central mechanism, <strong>attention</strong>, estimates how strongly each token should relate to other tokens in its context.</p>
+<p>In “The animal did not cross the street because it was tired,” interpreting <code>it</code> requires a relationship with <code>animal</code>, not simply the closest noun. Attention helps the model represent such contextual relationships. It also allows many tokens to be processed in parallel during training.</p>
+<p>Transformers provide the underlying architecture for BERT, GPT, and many contemporary large language models.</p>
+<h2>2. BERT</h2>
+<p><strong>BERT</strong> stands for <em>Bidirectional Encoder Representations from Transformers</em>. It learns from both the left and right context of a token. During pretraining, BERT repeatedly predicts words hidden by a <code>[MASK]</code> token:</p>
+<blockquote>
+<p>The <code>[MASK]</code> sat on the mat.</p>
+</blockquote>
+<p>Recovering a likely word requires patterns of grammar and meaning learned from the training corpus. BERT can consequently give <code>bank</code> different contextual representations in “river bank” and “bank loan.”</p>
+<p>BERT is a model architecture, not the name of one classroom app. Different training corpora and tasks produce variants designed for different purposes.</p>
+<h2>3. Historical BERT</h2>
+<p>A <strong>Historical BERT</strong> model is trained on historical texts. This matters because a model trained primarily on contemporary language may interpret nineteenth-century vocabulary, spelling, genre, religion, politics, and morality through modern patterns.</p>
+<p>Historical models do not remove the problem of bias. Their outputs still depend on the period, region, genre, OCR quality, and selection of their training data. The model is not a neutral reader; its corpus shapes what it can recognize.</p>
+<p><strong>Historical BERT Explorer</strong> supports two kinds of classroom comparison:</p>
+<ul>
+<li>comparing masked-word predictions from modern and historical models;</li>
+<li>comparing contextual vectors for a target word across a collection of passages.</li>
+</ul>
+<p>For example, students can collect passages containing <code>enthusiasm</code>, extract a contextual representation for that word in each passage, and read examples that the model places near or far from one another. The app organizes examples already gathered from texts, dictionaries, or corpora; it does not replace the work of finding and reading those examples.</p>
+<p>Models discussed in class include Living with Machines BERT (1760–1900), MacBERTh (1450–1950), and modern BERT as a point of comparison.</p>
+<h2>4. SBERT</h2>
+<p>Standard BERT was not designed for efficient semantic searching across thousands of sentences. <strong>Sentence-BERT (SBERT)</strong> adapts BERT so that each sentence can be encoded independently as one vector. Once the vectors are stored, sentence similarity can be compared efficiently with cosine similarity.</p>
+<p><strong>SBERT Text Lab</strong> uses this method to search the eleven course readings, divided into approximately 2,600 sentences. The course texts are vectorized in advance; the reader's query is vectorized when it is submitted.</p>
+<p>The default model, <code>all-MiniLM-L6-v2</code>, is a compact general-purpose sentence-transformer model that produces 384-dimensional vectors. It is useful for teaching and rapid comparison, but it was not designed specifically for nineteenth-century American literature. Archaic spelling, dialect, and historically specific meanings may therefore be represented unevenly.</p>
+<h2>5. What the Two Classroom Tools Compare</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Unit represented</th>
+<th>Main classroom question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Historical BERT Explorer</td>
+<td>A target word in a particular context</td>
+<td>How does a word's contextual use vary across passages or models?</td>
+</tr>
+<tr>
+<td>SBERT Text Lab</td>
+<td>A sentence or short passage</td>
+<td>Which passages are semantically similar to a query?</td>
+</tr>
+</tbody>
+</table>
+<p>Historical BERT focuses on a word within its context. SBERT focuses on sentence-level similarity. The two outputs are related but not interchangeable.</p>
+<h2>6. The Larger Sequence</h2>
+<pre><code class="language-text">exact strings
+  N-grams, frequency, concordance
+        ↓
+static word vectors
+  Word2Vec, GloVe, HistWords
+        ↓
+Transformer
+  attention across a context
+        ↓
+contextual word representations
+  BERT and Historical BERT
+        ↓
+sentence representations
+  SBERT and semantic search
+</code></pre>
+<p>This sequence does not mean that newer methods replace older ones. Exact search, static vectors, contextual word models, and sentence embeddings answer different questions.</p>
+<h2>7. A Research Workflow</h2>
+<ol>
+<li>Begin with a passage or question from the literary text.</li>
+<li>Decide whether you need exact wording, related vocabulary, a word in context, or similar passages.</li>
+<li>Record the tool, model, corpus, query, and settings.</li>
+<li>Treat rankings, clusters, and similarity scores as leads rather than evidence by themselves.</li>
+<li>Read the retrieved passages closely and compare them with dictionary or corpus evidence.</li>
+<li>Explain what the model may be responding to and what it may be missing.</li>
+</ol>
+<h2>8. Main Cautions</h2>
+<ul>
+<li>A similarity score is the model's judgment, not a linguistic or literary fact.</li>
+<li>Different models produce different vector spaces, rankings, and scores.</li>
+<li>Masked-word predictions and clusters reveal model tendencies, not authorial intention.</li>
+<li>Models inherit gaps and biases from their training data.</li>
+<li>Semantic similarity and critical significance are not the same thing.</li>
+<li>The final interpretation must return to the text and its historical context.</li>
+</ul>
+<h2>References</h2>
+<ul>
+<li>Ashish Vaswani et al. 2017. <a href="https://arxiv.org/abs/1706.03762">“Attention Is All You Need.”</a></li>
+<li>Jacob Devlin et al. 2019. <a href="https://aclanthology.org/N19-1423/">“BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.”</a></li>
+<li>Nils Reimers and Iryna Gurevych. 2019. <a href="https://aclanthology.org/D19-1410/">“Sentence-BERT: Sentence Embeddings Using Siamese BERT-Networks.”</a></li>
+<li>Kasra Hosseini et al. 2021. <a href="https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.48">“Neural Language Models for Nineteenth-Century English.”</a></li>
+<li>Enrique Manjavacas Arevalo and Lauren Fonteyn. 2021. <a href="https://aclanthology.org/2021.nlp4dh-1.4/">“MacBERTh: Development and Evaluation of a Historically Pre-trained Language Model for English (1450–1950).”</a></li>
+<li>Sentence Transformers. <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2"><code>all-MiniLM-L6-v2</code> model card</a>.</li>
+</ul>
+      </article>
+    </main>
+    <footer class="document-footer">
+      <p>DH 2026 | Kohei Furuya | Aoyama Gakuin University</p>
+    </footer>
+  </body>
+</html>

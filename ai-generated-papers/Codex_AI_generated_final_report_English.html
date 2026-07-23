@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Instructor-run AI experiment from How to Go Digital in American Literary Studies.">
+    <title>Domestic Labor, Religious Order, and Freedom in Stowe and McCune Smith | DH 2026</title>
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body class="document-body ai-document">
+    <header class="document-header">
+      <div class="document-header-inner">
+        <a class="back-link" href="../index.html">&larr; Back to poster resources</a>
+        <p>Instructor-run AI experiment</p>
+      </div>
+    </header>
+    <main class="document-main">
+      <article class="markdown-body">
+<h1>Domestic Labor, Religious Order, and Freedom in Stowe and McCune Smith</h1>
+<blockquote>
+<p><strong>AI-use note.</strong> This paper was drafted entirely by generative AI as an instructor-run experiment, not as a student submission. It combines executed frequency and KWIC analysis, a small local approximation for word vectors, and comparisons using precomputed SBERT embeddings. The close reading, framing, interpretation, and prose are AI-generated. A human reader should verify the quoted passages, tool settings, and results before treating the paper as reliable. See the accompanying creation-conditions page for details.</p>
+</blockquote>
+<h2>Question and Texts</h2>
+<p>This paper compares Harriet Beecher Stowe's &quot;The Minister's Housekeeper&quot; and James McCune Smith's &quot;The Washerwoman.&quot; My question is: when domestic labor appears in a religious setting, does the text make that labor visible as labor, or does it turn it into moral order, feminine character, or freedom? I chose these two texts because the Week 10 and Week 11 handouts already suggest a useful comparison. Stowe's story asks how household work, religion, and marriage are connected through Huldy and Parson Carryl. McCune Smith's shorter sketch asks how washing, ironing, sound, Sabbath, slavery, and freedom are compressed into one scene.</p>
+<p>My main argument is that both texts connect women's domestic labor to religious life, but they make the labor visible in very different ways. In Stowe, Huldy's work becomes almost naturalized. It is presented as capability, music, order, and eventually marriage. The work matters, but the story often makes it feel effortless. In McCune Smith, by contrast, labor is not softened. It is heard through the repeated sound &quot;Dunk!&quot; and seen in the body of the washerwoman. Religion does not simply bless the labor; it also creates pressure, because the Sabbath is approaching while the work must still be finished. Digital tools helped me notice this difference, but they also missed some of the most important things, especially tone, irony, and bodily exhaustion.</p>
+<h2>Initial Close Reading</h2>
+<p>Before using tools, I read the two works as stories about women's work inside or near religious communities. In &quot;The Minister's Housekeeper,&quot; Huldy enters Parson Carryl's household after his wife dies. At first, her work looks practical: she takes care of the house, cooks, washes, irons, manages money, and brings order to a place that the minister cannot manage by himself. But the narration does not present this only as labor. Huldy is described as unusually capable, cheerful, musical, and almost naturally fitted to make things prosper. Her domestic work becomes part of the minister's spiritual life: her singing and flowers seem to affect his sermons and imagination. The conflict comes when the community begins to talk about whether it is proper for a young woman to stay in the minister's house. Marriage then turns the questionable labor arrangement into a socially acceptable household.</p>
+<p>&quot;The Washerwoman&quot; begins much more physically. The opening sound of the smoothing iron immediately turns work into rhythm. The washerwoman's hand, wrist, muscles, veins, eye, brow, sweat, hot room, and heavy air make labor visible as bodily strain. The text also connects this labor to religion, but the connection is uneasy. The Sabbath approaches, and the pulpit threatens those who &quot;do labor&quot; on the Day of Rest, even though the washerwoman must keep working. The sketch then moves from her exhausting work to her sisters in the South, bondage, and freedom. The washerwoman's labor is not simply housework. It is tied to economic survival, family obligation, and the memory of slavery.</p>
+<h2>Category 1: Frequency, KWIC, and Distribution</h2>
+<p>For the first method, I used a simple DH Reading Lab-style frequency and KWIC analysis on the local course text files. The two texts are different in length, so I normalized the counts per 1,000 words. Stowe's text had about 5,351 word tokens, and McCune Smith's had about 1,341.</p>
+<p>The counts were useful because they complicated my first expectation. I expected Stowe to use &quot;work&quot; much more often than McCune Smith, because Huldy's usefulness is central to the story. But the normalized count was actually similar: <code>work*</code> appeared 9 times in Stowe, or 1.68 per 1,000 words, and 2 times in McCune Smith, or 1.49 per 1,000 words. The difference was not the amount of &quot;work&quot; vocabulary, but the surrounding vocabulary. Stowe had 18 uses of <code>house*</code>, 74 uses of <code>minister</code> or <code>parson</code>, 17 uses of singing-related words, and 16 uses of <code>talk*</code>. McCune Smith had no <code>house*</code> in my search, no singing vocabulary, but 10 uses of <code>Dunk</code>, 2 uses of <code>labor</code>, 3 uses of <code>freedom/free</code>, and 1 use of <code>Sabbath</code>.</p>
+<p>This changed my reading. In Stowe, domestic labor is absorbed into the vocabulary of the house, the minister, singing, and community talk. The work is everywhere in the plot, but not always named as labor. The KWIC lines confirmed this. Huldy's work is described as something that &quot;rolled off from her,&quot; and another line says no girl could put such a &quot;sight o' work&quot; through as Huldy. These phrases make her labor impressive, but also make it seem easy and natural. Even the phrase &quot;worked and worked&quot; appears in a comic scene about getting a pig out of the well, not in a serious description of exhaustion.</p>
+<p>In McCune Smith, the keyword pattern is different. The word <code>Dunk</code> dominates the soundscape. The KWIC lines around <code>labor</code> and <code>Dunk</code> returned the opening ironing scene, the phrase &quot;heart of toil,&quot; the description of labor on the Sabbath, and the line that freedom is &quot;however toilsome&quot; still sweet. These results pushed me back to the first paragraph. The washerwoman's work is not hidden under household harmony. It interrupts the reader again and again as sound.</p>
+<p>The limitation of this method is that it depends on exact strings. Stowe can represent labor through &quot;house,&quot; &quot;singing,&quot; &quot;flowers,&quot; &quot;order,&quot; and &quot;talk,&quot; while McCune Smith can represent it through sound and the body. A frequency search can show that the vocabularies differ, but it cannot by itself explain why Stowe's cheerful style may make labor less visible.</p>
+<h2>Category 2: Word Vectors and Nearby Contexts</h2>
+<p>For the second method, I tried a small word-vector experiment. The class handout explains that GloVe learns from corpus-wide co-occurrence and that nearby words are not always synonyms, but words that appear in similar contexts. I could not reproduce the full pre-trained GloVe Colab model locally, so I made a smaller and weaker alternative from the course corpus: a co-occurrence matrix with a five-word window, PPMI weighting, and SVD. This is not the same as GloVe, and I treat it only as a limited experiment.</p>
+<p>The results were noisy but still suggestive. In the local course-corpus model, <code>minister</code> was closest to words such as <code>parson</code>, <code>huldy</code>, <code>blodgett</code>, <code>deakin</code>, <code>says</code>, <code>mis</code>, and <code>wal</code>. This was useful because it showed that, inside the course corpus, &quot;minister&quot; is not only a religious office. It is embedded in a spoken community: dialect, named neighbors, church members, and reported speech. That fits Stowe's story, where the minister's household problem becomes a problem of village talk.</p>
+<p>The target <code>work</code> returned neighbors such as <code>rolled</code>, <code>huldy's</code>, <code>sight</code>, <code>gal</code>, <code>good</code>, and <code>minister's</code>. This again made me think about how Stowe's work vocabulary is attached to Huldy as a character. It is not abstract labor. It becomes a measure of her goodness, usefulness, and suitability for the minister's household. The target <code>dunk</code>, from McCune Smith, was close to <code>goes</code>, <code>frame</code>, <code>washerwoman</code>, and <code>iron</code>. This makes sense because &quot;Dunk&quot; is tied to repeated action, object, and body. It is not a general word about work, but a sound that creates a local scene of work.</p>
+<p>The target <code>freedom</code> was less clean. It was near words such as <code>liberty</code>, <code>partake</code>, <code>born</code>, and <code>however</code>, but also some odd words. I read this as a failure caused by the small corpus. Still, the presence of <code>liberty</code> and <code>born</code> was enough to send me back to McCune Smith's passage about freedom. There, freedom is not rest. The phrase &quot;however toilsome&quot; matters because freedom remains connected to work, but work done under freedom is different from work under bondage.</p>
+<p>This vector experiment helped me see that the two works do not simply oppose labor and religion. Stowe's &quot;minister&quot; is surrounded by a community of speech and supervision. McCune Smith's &quot;dunk&quot; is surrounded by motion and object. But the method also showed its own weakness. Because my model was trained on a small course corpus, some neighbors were accidental. I would not use these vectors as proof. I would use them as a way to notice which passages deserve rereading.</p>
+<h2>Category 3: SBERT Sentence Comparison</h2>
+<p>For the third method, I used the precomputed sentence embeddings in the local SBERT Text Lab data. The original Week 10 and Week 11 settings use <code>all-MiniLM-L6-v2</code>, sentence unit, and work filters for Stowe and McCune Smith. Since I could not reload the external model in the local environment, I compared already embedded sentences against one another. This still tests the SBERT idea: sentence vectors can find passages that may be close in meaning even without exact keyword overlap.</p>
+<p>The most interesting result was partly a failure. I used the McCune Smith sentence beginning &quot;Dunk! dunk! goes the iron, sadly, wearily, but steadily&quot; as the query sentence and searched for nearby Stowe sentences. The top Stowe results were weak and not very useful. They included comic or action-based sentences about things running downhill, a corn-basket, and a pig-pen scene. The similarity scores were low, around 0.26 to 0.31. This showed me that the model recognized something like motion or action, but it did not understand the literary force of the repeated sound as labor rhythm. In other words, the failure was meaningful. SBERT did not read &quot;Dunk!&quot; the way I did as a reader.</p>
+<p>Another query worked better. I used the McCune Smith sentence about freedom, the body, and the iron moving quickly. This returned Stowe sentences about Huldy staying with Mrs. Carryl, taking care of things, pouring tea, mending clothes, making pies and cakes, cooking, washing, ironing, and keeping everything neat. This was a strong result because it found domestic labor in Stowe even though the two passages do not use all the same keywords. It helped me compare the two texts: in both, female labor keeps a household or family network functioning, but Stowe turns that labor toward household beauty and marriage, while McCune Smith turns it toward freedom, relatives, and anti-slavery politics.</p>
+<p>I also reversed the direction. I used Stowe's sentence about Huldy singing while working. The nearest McCune Smith results included the smoothing-iron sentence and the sentence where the washerwoman's mind is &quot;far away&quot; with sisters and children who toil without pay. This comparison helped me see a contrast that the model could not fully explain. It found a relation between work, repeated motion, and domestic space. But it did not capture the emotional difference between Huldy's musical labor and the washerwoman's heavy rhythmic labor.</p>
+<p>A third query failed in a different way. I used Stowe's marriage-proposal sentence, where the minister says marriage can stop the talk about Huldy. The McCune Smith results were scattered and not useful. This makes sense. The issue in that Stowe sentence is social legitimacy, gender surveillance, and narrative resolution. Those are not easy to capture through surface sentence similarity.</p>
+<h2>Comparing the Three Methods</h2>
+<p>The three methods helped in different ways. Frequency and KWIC gave me the clearest contrast: Stowe's text is full of house, minister, singing, and talk, while McCune Smith's shorter text is dominated by <code>Dunk</code>, labor, Sabbath, and freedom. Word vectors made me notice local neighborhoods: <code>minister</code> belongs to village speech and supervision, while <code>dunk</code> belongs to repeated bodily action. SBERT was useful for finding comparison passages when the shared topic was domestic work, but it was weak when the important issue was sound, irony, or social resolution.</p>
+<p>Returning to close reading, I would say that Stowe's story makes domestic labor socially productive but also hides its cost. Huldy's labor becomes valuable because it stabilizes the minister's house, improves religious feeling, and finally produces marriage. The community first treats her labor as useful, then suspicious, then acceptable once she becomes the minister's wife. McCune Smith's sketch refuses that softening. The washerwoman's labor is repetitive, painful, and historically connected to slavery. Even when freedom appears, it does not erase toil. It changes the meaning of toil.</p>
+<h2>Limits and What I Would Try Next</h2>
+<p>There are several limits to this paper. First, the two texts are very different in length, so normalized counts are necessary but not enough. Second, my word-vector experiment used a small local course corpus, not a reliable large model. It produced useful hints but also strange neighbors. Third, the SBERT experiment used precomputed embeddings, and I compared sentence to sentence rather than entering a fresh natural-language query. Fourth, digital tools had trouble with dialect, humor, sound, and irony. Those features may be exactly what matter most in both texts.</p>
+<p>If I continued, I would try a larger pre-trained GloVe model in Colab and compare <code>work</code>, <code>labor</code>, <code>toil</code>, <code>freedom</code>, <code>home</code>, and <code>house</code>. I would also create a small table of all passages in both texts that include washing, ironing, singing, Sabbath, or talk, then reread them manually. The tools helped me find patterns, but the main interpretation still came from returning to the passages.</p>
+<h2>Workflow Log</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Tool or data</th>
+<th>Query / target</th>
+<th>Conditions</th>
+<th>Main result</th>
+<th>Passage reread</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frequency / KWIC</td>
+<td>Local DH Reading Lab-style script</td>
+<td><code>work*</code>, <code>labor</code>, <code>house*</code>, <code>minister/parson</code>, <code>freedom/free</code>, <code>dunk</code>, <code>sing*</code>, <code>talk*</code></td>
+<td>Stowe and McCune Smith course text files; normalized per 1,000 words</td>
+<td>Stowe had more <code>house</code>, <code>minister/parson</code>, <code>sing</code>, and <code>talk</code>; McCune Smith had <code>dunk</code>, <code>labor</code>, and <code>freedom</code> concentrated in a short text</td>
+<td>Huldy's work scenes; opening ironing scene of &quot;The Washerwoman&quot;</td>
+</tr>
+<tr>
+<td>Word vectors</td>
+<td>Small local co-occurrence vector model, PPMI + SVD</td>
+<td><code>minister</code>, <code>work</code>, <code>dunk</code>, <code>freedom</code></td>
+<td>Course corpus; 5-word window; min count 3</td>
+<td><code>minister</code> clustered with Huldy and village speech; <code>dunk</code> clustered with iron/action/body words</td>
+<td>Stowe's village gossip and household management; McCune Smith's sound pattern</td>
+</tr>
+<tr>
+<td>Transformer / SBERT</td>
+<td>Precomputed <code>all-MiniLM-L6-v2</code> sentence embeddings</td>
+<td>McCune Smith sentence about freedom and the iron</td>
+<td>Sentence-to-sentence comparison; Stowe as comparison work</td>
+<td>Returned Stowe sentences about Huldy cooking, washing, ironing, and keeping the house neat</td>
+<td>Stowe's domestic labor passage after Mrs. Carryl's death</td>
+</tr>
+<tr>
+<td>Transformer / SBERT failure</td>
+<td>Same</td>
+<td>McCune Smith sentence beginning <code>Dunk! dunk! goes the iron</code></td>
+<td>Compared against Stowe sentences</td>
+<td>Returned weak action/comic matches; did not capture rhythm as labor</td>
+<td>Opening paragraph of &quot;The Washerwoman&quot;</td>
+</tr>
+</tbody>
+</table>
+      </article>
+    </main>
+    <footer class="document-footer">
+      <p>DH 2026 | Kohei Furuya | Aoyama Gakuin University</p>
+    </footer>
+  </body>
+</html>

@@ -4,7 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Course materials for the DH 2026 Pedagogy and Training SIG poster slam presentation by Kohei Furuya.">
+    <meta property="og:title" content="How to Go Digital in American Literary Studies">
+    <meta property="og:description" content="Course materials and AI experiments from a beginner-centered Digital Humanities course.">
+    <meta property="og:type" content="website">
     <title>How to Go Digital in American Literary Studies</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -41,38 +45,169 @@
 
         <figure class="lenses" aria-label="Three layers used in the course">
           <div class="lens lens-one">
-            <span>Layer 1</span>
-            <strong>Frequency &amp; Context</strong>
+            <span class="lens-number" aria-hidden="true">1</span>
+            <div class="lens-copy">
+              <span>Layer 1</span>
+              <strong>Frequency &amp; Context</strong>
+            </div>
           </div>
           <div class="lens lens-two">
-            <span>Layer 2</span>
-            <strong>Words in Relation</strong>
+            <span class="lens-number" aria-hidden="true">2</span>
+            <div class="lens-copy">
+              <span>Layer 2</span>
+              <strong>Words in Relation</strong>
+            </div>
           </div>
           <div class="lens lens-three">
-            <span>Layer 3</span>
-            <strong>Contextual Search</strong>
+            <span class="lens-number" aria-hidden="true">3</span>
+            <div class="lens-copy">
+              <span>Layer 3</span>
+              <strong>Contextual Search</strong>
+            </div>
           </div>
           <figcaption>One story, three lenses</figcaption>
         </figure>
       </section>
 
-      <section class="resources" aria-labelledby="resources-title">
-        <p class="section-label">Poster resources</p>
-        <h2 id="resources-title">Course materials, AI papers, and live demos</h2>
-        <div class="resource-list">
-          <div>
-            <h3>Course Materials</h3>
-            <p>Syllabus, weekly handouts, and assignment materials.</p>
-          </div>
-          <div>
-            <h3>AI-Generated Papers</h3>
-            <p>Sample papers and notes on how they were produced.</p>
-          </div>
-          <div>
-            <h3>Live Demos</h3>
-            <p>Digital tools used for close reading and literary inquiry.</p>
-          </div>
+      <section id="course-materials" class="materials" aria-labelledby="materials-title">
+        <p class="section-label">Course materials</p>
+        <h2 id="materials-title">Twelve weeks of computational reading, followed by a final-paper workshop</h2>
+        <p>The detailed course syllabus, twelve English weekly handouts, the final paper assignment, and three research-methods handouts document the course design and its progression.</p>
+        <div class="primary-downloads">
+          <a class="download-card" href="course-materials/syllabus/DH2026_actual_course_syllabus_en.html">
+            <strong>Course syllabus</strong>
+            <span class="card-action">Open material <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a class="download-card" href="course-materials/weekly-handouts/index.html">
+            <strong>Weekly handouts (Weeks 1&ndash;12)</strong>
+            <span class="card-action">Open material <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a class="download-card" href="course-materials/assignments/DH2026_final_paper_prompt_en.html">
+            <strong>Final paper assignment</strong>
+            <span class="card-action">Open material <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a class="download-card" href="course-materials/methods/DH2026_vocabulary_search_method_en.html">
+            <strong>Vocabulary search method</strong>
+            <span class="card-action">Open material <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a class="download-card" href="course-materials/methods/DH2026_vector_models_handout_en.html">
+            <strong>Vector models</strong>
+            <span class="card-action">Open material <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a class="download-card" href="course-materials/methods/DH2026_transformer_bert_sbert_handout_en.html">
+            <strong>Transformers, BERT, SBERT, and Historical BERT</strong>
+            <span class="card-action">Open material <span aria-hidden="true">&rarr;</span></span>
+          </a>
         </div>
+      </section>
+
+      <section class="screenshots" aria-labelledby="screenshots-title">
+        <p class="section-label">Classroom tools</p>
+        <h2 id="screenshots-title">From counting words to contextual comparison</h2>
+        <p class="app-access"><strong>Conference access:</strong> DH Reading Lab is open without a password. For the other four demos, ask me for the username and password at the poster session.</p>
+        <div class="image-grid">
+          <a class="tool-card" href="https://fru-co.github.io/dh-reading-lab/" target="_blank" rel="noopener">
+            <figure>
+              <img src="assets/images/dh-reading-lab-frequency.png" alt="Frequency analysis in DH Reading Lab" loading="lazy">
+              <figcaption>DH Reading Lab: frequency and context <span aria-hidden="true">&rarr;</span></figcaption>
+            </figure>
+          </a>
+          <a class="tool-card" href="https://163.220.179.33.sslip.io/word-vectors/" target="_blank" rel="noopener">
+            <figure>
+              <img src="assets/images/word-vector-explorer-week07.png" alt="Word Vector Explorer interface" loading="lazy">
+              <figcaption>Word Vector Explorer: words in relation <span aria-hidden="true">&rarr;</span></figcaption>
+            </figure>
+          </a>
+          <a class="tool-card" href="https://163.220.179.33.sslip.io/histwords/" target="_blank" rel="noopener">
+            <figure>
+              <img src="assets/images/histwords-explorer-week09.png" alt="HistWords Explorer interface" loading="lazy">
+              <figcaption>HistWords Explorer: semantic change over time <span aria-hidden="true">&rarr;</span></figcaption>
+            </figure>
+          </a>
+          <a class="tool-card" href="https://163.220.179.33.sslip.io/bertlab/" target="_blank" rel="noopener">
+            <figure>
+              <img src="assets/images/sbert-text-lab-similarity.png" alt="Sentence-BERT Text Lab interface" loading="lazy">
+              <figcaption>SBERT Text Lab: contextual comparison <span aria-hidden="true">&rarr;</span></figcaption>
+            </figure>
+          </a>
+          <a class="tool-card" href="https://163.220.179.33.sslip.io/historical-bert/" target="_blank" rel="noopener">
+            <figure>
+              <img src="assets/images/historical-bert-explorer.png" alt="Historical BERT Explorer interface" loading="lazy">
+              <figcaption>Historical BERT Explorer: words in historical context <span aria-hidden="true">&rarr;</span></figcaption>
+            </figure>
+          </a>
+        </div>
+      </section>
+
+      <section class="teacher-learning" aria-labelledby="teacher-learning-title">
+        <p class="section-label">Instructor preparation</p>
+        <h2 id="teacher-learning-title">The teacher is learning too</h2>
+        <figure class="attention-example">
+          <div class="attention-example-body">
+            <div class="equation-panel">
+              <p class="equation-label">The paper says:</p>
+              <p class="attention-formula" role="img" aria-label="Attention of Q, K, and V equals softmax of Q K transpose divided by the square root of d sub k, multiplied by V.">
+                <span class="formula-expression">Attention(<i>Q</i>, <i>K</i>, <i>V</i>) =</span>
+                <span class="formula-expression">softmax<span class="formula-paren">(</span><span class="formula-fraction"><span><i>QK</i><sup>T</sup></span><span>&radic;<i>d</i><sub>k</sub></span></span><span class="formula-paren">)</span><i>V</i></span>
+              </p>
+              <p class="equation-source">Vaswani et al., 2017</p>
+            </div>
+            <div class="tutor-dialogue">
+              <p class="learner-line"><strong>Me:</strong> What&rsquo;s <i>QK</i><sup>T</sup>? What&rsquo;s <i>d</i><sub>k</sub>? What&rsquo;s softmax? What the&mdash;?</p>
+            </div>
+          </div>
+          <figcaption>That confusion led me to build a personal Codex skill and start again with notation, vectors, and matrix shapes.</figcaption>
+        </figure>
+        <div class="tutor-card">
+          <h3>LLM Math Tutor &mdash; Learning with an AI Agent</h3>
+          <div class="tutor-diagram" aria-label="Example of learning mathematics through chat">
+            <div class="tutor-question-card">
+              <span>Chat</span>
+              <p>What does &#8477;<sup>3</sup> mean?<br>How do I calculate a dot product?</p>
+            </div>
+            <span class="tutor-arrow" aria-hidden="true">&rarr;</span>
+            <div class="tutor-answer-card">
+              <p class="answer-term">&#8477;<sup>3</sup></p>
+              <p class="answer-definition">All ordered triples of real numbers: (<i>x</i>, <i>y</i>, <i>z</i>).</p>
+              <p class="answer-calculation">[1, 2] &middot; [3, 4] = 1 &times; 3 + 2 &times; 4 = 11</p>
+            </div>
+          </div>
+          <div class="tutor-strip" aria-label="Chat, then paper, then local log">
+            <strong>Chat</strong><span aria-hidden="true">&rarr;</span>
+            <strong>Paper</strong><span aria-hidden="true">&rarr;</span>
+            <strong>Local log</strong>
+          </div>
+          <p class="tutor-goal"><strong>Goal:</strong> read equations in Attention, BERT, and GPT papers. <strong>Day 1:</strong> notation, vectors, and matrix shape.</p>
+        </div>
+        <p class="teacher-learning-note">Teacher learning is part of the course design, not outside it.</p>
+      </section>
+
+      <section id="ai-papers" class="ai-papers" aria-labelledby="ai-papers-title">
+        <p class="section-label">Generative AI experiment</p>
+        <h2 id="ai-papers-title">What changes when an AI can use tools?</h2>
+        <p>The experiment began with a practical concern: could a student delegate the entire final paper to generative AI and receive a plausible submission without performing the course&rsquo;s analytical work? Codex and Claude Code were given the assignment and course materials to test that possibility.</p>
+        <p>The Claude Code papers directly compare fabricated results with executed analyses, while the Codex paper documents a hybrid workflow combining executed counts, a local approximation, and precomputed embeddings. Each paper is accompanied by notes on its creation conditions.</p>
+        <div class="paper-list">
+          <article>
+            <h3>Codex</h3>
+            <a href="ai-generated-papers/Codex_AI_generated_final_report_English.html">Generated final paper</a>
+            <a href="ai-generated-papers/Codex_AI_generated_final_report_creation_conditions.html">Creation conditions</a>
+          </article>
+          <article>
+            <h3>Claude Code</h3>
+            <a href="ai-generated-papers/DH2026_AI_report_Claude_Code_v1_no_tools_simulated_EN.html">Version 1: no tools, fabricated results</a>
+            <a href="ai-generated-papers/DH2026_AI_report_Claude_Code_v2_tools_executed_EN.html">Version 2: tools executed</a>
+            <a href="ai-generated-papers/DH2026_AI_report_Claude_Code_experiment_conditions.html">Experiment conditions</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="reuse" aria-labelledby="reuse-title">
+        <p class="section-label">Reuse and adaptation</p>
+        <h2 id="reuse-title">Start with a literary question, not code.</h2>
+        <p>The materials can be adapted by substituting a new literary text, choosing one small computational operation, and asking students to interpret both what the result reveals and what it cannot explain.</p>
+        <p><strong>Suggested citation:</strong> Kohei Furuya, “How to Go Digital in American Literary Studies,” DH 2026 Pedagogy &amp; Training SIG Poster Slam, Daejeon, 27 July 2026.</p>
+        <p><strong>Conference reference:</strong> <a href="poster/DH2026_A0_Poster_Submission_Kohei_Furuya.pdf">View the submitted poster (PDF)</a>.</p>
       </section>
     </main>
 

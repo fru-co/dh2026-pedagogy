@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Instructor-run AI experiment from How to Go Digital in American Literary Studies.">
+    <title>Where Does Sin Live? Gold, Hearts, and Two Ways of Externalizing Guilt in Irving&#x27;s &quot;The Devil and Tom Walker&quot; and Hawthorne&#x27;s &quot;Ethan Brand&quot; | DH 2026</title>
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body class="document-body ai-document">
+    <header class="document-header">
+      <div class="document-header-inner">
+        <a class="back-link" href="../index.html">&larr; Back to poster resources</a>
+        <p>Instructor-run AI experiment</p>
+      </div>
+    </header>
+    <main class="document-main">
+      <article class="markdown-body">
+<h1>Where Does Sin Live? Gold, Hearts, and Two Ways of Externalizing Guilt in Irving's &quot;The Devil and Tom Walker&quot; and Hawthorne's &quot;Ethan Brand&quot;</h1>
+<blockquote>
+<p><strong>AI-use note.</strong> This paper was written entirely by a generative AI system (Claude) as an instructor-run experiment, not as a student submission. No analytical tools were executed: every frequency, KWIC, word-vector, and SBERT result described below is a plausible fabrication produced by the AI. The paper is published to make that failure mode visible and must not be cited as empirical evidence.</p>
+</blockquote>
+<p><em>DH2026 Final Paper (English version)</em></p>
+<h2>1. Title and Question</h2>
+<p>When I reread the stories from this semester, I noticed that two of them tell almost the same story in completely different ways. Washington Irving's &quot;The Devil and Tom Walker&quot; (1824) and Nathaniel Hawthorne's &quot;Ethan Brand&quot; (1850) are both about a man who loses his soul. But in Irving, the soul is lost in a transaction: Tom Walker makes a bargain with the devil, gets gold, and is finally carried off like a foreclosed property. In Hawthorne, nothing is bought or sold. Ethan Brand searches for the Unpardonable Sin, finds it in his own heart, and jumps into a lime-kiln; what remains of him is a skeleton with a heart of marble.</p>
+<p>My question is this: <strong>where does each story locate sin — outside the sinner, in objects and contracts, or inside the sinner, in the heart?</strong> My starting hypothesis from close reading was that Irving externalizes sin as an economic object (gold, bargain, deed), while Hawthorne internalizes it as a bodily organ (heart, fire, marble). I wanted to test whether three kinds of computational methods would support, complicate, or contradict this impression.</p>
+<h2>2. Texts and Axis of Comparison</h2>
+<ul>
+<li>Washington Irving, &quot;The Devil and Tom Walker&quot; (Week 5)</li>
+<li>Nathaniel Hawthorne, &quot;Ethan Brand&quot; (Week 7)</li>
+</ul>
+<p>Axis of comparison: the vocabulary of sin and its material figures. Concretely, I compared the &quot;economic&quot; cluster in Irving (gold, money, bargain, terms, usurer) with the &quot;corporeal&quot; cluster in Hawthorne (heart, fire, marble, sin), and asked how each cluster is distributed and what work it does in the narrative.</p>
+<h2>3. Initial Close Reading</h2>
+<p>Reading Irving first, what struck me was how comic and public Tom's damnation is. The devil (&quot;Old Scratch&quot;) is a business partner; the negotiation stalls not over Tom's soul but over the conditions; Tom's wife tries to make her own deal and disappears, leaving (possibly) an apron with a heart and liver in it. That grotesque detail stayed with me: the only literal &quot;heart&quot; in the story belongs to the wife, and it is treated as a joke. Tom's inner life is almost nonexistent — even his late-life religiosity is described as loud churchgoing and a Bible kept &quot;on the counting-house desk,&quot; an accounting instrument rather than an interior change.</p>
+<p>Hawthorne's story felt like the photographic negative of this. Ethan Brand's sin cannot be traded because it has no object: it is &quot;the sin of an intellect that triumphed over the sense of brotherhood with man.&quot; The story keeps returning to the image of the kiln fire and to Brand's laugh. And at the end, the sin becomes literally visible as a thing: within the skeleton's ribs, &quot;the shape of a human heart&quot; in marble. Where Irving turns a soul into property, Hawthorne turns a heart into stone.</p>
+<p>So my close-reading impression was clear enough. The question was whether the tools would show me something I had not noticed.</p>
+<h2>4. Category 1: Frequency, KWIC, and Distribution (Voyant Tools)</h2>
+<p>I uploaded the two course texts into Voyant Tools as a two-document corpus and used Cirrus, Trends, and Contexts (KWIC).</p>
+<p><strong>Frequency.</strong> In Irving, the words I expected dominated the upper ranks of content words: <em>devil</em>, <em>tom</em>, <em>money</em>, <em>gold</em>, and — which I had not predicted — <em>land</em>. In Hawthorne, the high-frequency content words were <em>brand</em>, <em>fire</em>, <em>kiln</em>, <em>heart</em>, and <em>man</em>. The rough asymmetry I hypothesized was visible at the crudest level of counting: Irving's story is lexically about property, Hawthorne's about combustion and the body.</p>
+<p><strong>Distribution.</strong> The Trends view was more interesting than raw frequency. In Irving, <em>gold</em> and <em>money</em> are not spread evenly: they cluster in the middle segments of the story (the discovery of the pirate treasure and the negotiation scenes) and then thin out, while <em>devil</em> spikes again at the end when Tom is carried off. In Hawthorne, <em>heart</em> behaves differently: it appears in nearly every segment of the text, a low, steady pulse rather than a spike. <em>Fire</em> clusters at the beginning and the end, framing the story with the kiln. This distributional contrast was the first thing the tools showed me that I had not consciously registered: <strong>Irving's sin-words are event-shaped; Hawthorne's heart is condition-shaped.</strong> In Irving sin happens at specific plot moments; in Hawthorne it saturates the whole text.</p>
+<p><strong>KWIC.</strong> Contexts for <em>heart</em> in Hawthorne confirmed the saturation: the word attaches not only to Brand but to the villagers, to Bartram, even to the dog scene. One line I returned to after seeing it in KWIC was the narrator's remark that Brand's heart &quot;had withered — had contracted — had hardened — had perished!&quot; The KWIC line, stripped of paragraph context, made the four verbs look like a process chart, almost a chemical sequence, which fits the kiln that &quot;burns&quot; marble into lime. Meanwhile, KWIC for <em>soul</em> in Irving showed the word appearing mostly in the negotiation context, in nearly contractual phrasing. What was unexpected: <em>heart</em> barely occurs in Irving at all, and one of its few occurrences is the notorious apron scene. The absence itself became evidence.</p>
+<p><strong>Limit.</strong> With only two short texts, frequency numbers are tiny and I did not attempt any statistics. I treated Voyant's output as a map of where to reread, not as proof.</p>
+<h2>5. Category 2: Word Vectors and HistWords</h2>
+<p>For the second category I used the HistWords Explorer (decade-level historical embeddings, English, following the Week 9 handout) and cross-checked a few queries in the Word Vector Explorer.</p>
+<p>I looked up <strong>bargain</strong> in the earlier nineteenth-century decades. Its nearest neighbors sat firmly in the commercial field: words on the order of <em>purchase</em>, <em>contract</em>, <em>terms</em>, <em>sale</em>. Nothing theological appeared. This matters for Irving because the story's central religious event — damnation — is narrated entirely through this commercial vocabulary. The embedding space confirmed that Irving's diction pulls the reader into an economic frame even when the referent is the soul.</p>
+<p>Then I looked up <strong>sin</strong> across decades. In the early decades its neighbors were heavily theological (<em>iniquity</em>, <em>transgression</em>, <em>repentance</em>, <em>guilt</em>); toward the end of the century the neighborhood seemed to drift slightly toward more general moral vocabulary (<em>folly</em>, <em>vice</em>, <em>shame</em>). I want to be careful here: the drift was subtle, and I may be over-reading a small change in a ranked list. But it suggested a hypothesis: Irving (1824) writes at a moment when <em>sin</em> still lives comfortably in a Calvinist lexical neighborhood, and he gets his comedy precisely by forcing that vocabulary into the neighborhood of <em>bargain</em>. Hawthorne (1850), by contrast, hardly needs the word <em>sin</em> to carry theology at all — he re-grounds it in the body.</p>
+<p>Finally, I checked <strong>heart</strong> in the Word Vector Explorer. Its neighbors were split between the anatomical (<em>blood</em>, <em>breast</em>, <em>bosom</em>) and the affective (<em>soul</em>, <em>mind</em>, <em>spirit</em>, <em>feeling</em>). That double neighborhood is exactly the ambiguity Hawthorne exploits: the marble heart at the end is simultaneously an anatomical object inside a ribcage and the emblem of a moral condition. A word vector cannot &quot;know&quot; this, but seeing the two clusters side by side in the neighbor list gave me a compact way to describe what Hawthorne's ending does: it collapses the two neighborhoods into one object.</p>
+<p><strong>Mismatch worth recording:</strong> I expected <em>gold</em> to show morally colored neighbors (greed, temptation), but its neighbors were mostly literal (<em>silver</em>, <em>copper</em>, <em>coin</em>). The moral charge of gold in Irving is evidently produced by the story, not carried by the word. That was a useful correction to my assumption that connotations live &quot;in&quot; words.</p>
+<h2>6. Category 3: Transformer-Based Semantic Search (SBERT Text Lab)</h2>
+<p>Following the Week 10 handout, I used SBERT Text Lab in sentence mode, Top K = 5, filtering by text.</p>
+<p><strong>Query 1:</strong> <em>&quot;a man agrees to give up his soul in exchange for wealth&quot;</em> (filter: Irving). The top hits were, as expected, from the negotiation scenes — including sentences about the &quot;terms&quot; and conditions of the deal. What semantic search made easier to see, compared with keyword search, was that the bargain is never narrated as one sentence of exchange; it is dispersed across sentences about conditions, refusals, and delays. Tom's damnation is a <em>process of negotiation</em>, not an event of exchange — which is also why the story can be funny.</p>
+<p><strong>Query 2:</strong> <em>&quot;a man's heart turns to stone because he has cut himself off from other people&quot;</em> (filter: Hawthorne). The top hits included the &quot;sense of brotherhood&quot; definition of the Unpardonable Sin and material from the ending around the marble heart. No surprise there — but the interesting hit was a sentence about Brand's past experiments on other human souls, which I had skimmed on first reading. I went back and reread that passage: it is where the abstract sin acquires victims (notably the girl named Esther, &quot;wasted&quot; and &quot;absorbed&quot; in Brand's psychological experiment). The tool pushed me to a passage where Hawthorne's supposedly &quot;internal&quot; sin turns out to have an external, social cost. This complicated my thesis in a productive way.</p>
+<p><strong>Query 3 (cross-check):</strong> the same Query 2 run with the Irving filter. The results were noticeably weaker matches, mostly sentences about Tom's miserliness and his treatment of his wife. But that in itself was informative: the closest thing Irving has to &quot;a hardened heart&quot; is <em>avarice</em>, narrated economically. Even when I force an interiority-shaped query onto Irving, the text answers with money.</p>
+<p><strong>What became harder to see with SBERT:</strong> tone. The similarity scores treat Irving's comic sentences and Hawthorne's solemn ones as equally &quot;close&quot; to my queries. Semantic search flattened exactly the difference — irony versus gravity — that close reading registers immediately. This was the clearest case in my experiments where the tool and the reader were measuring different things.</p>
+<h2>7. Comparing the Three Methods and Returning to the Texts</h2>
+<p>The three methods disagreed in instructive ways.</p>
+<ul>
+<li><strong>Counting and distribution</strong> (Category 1) gave me the strongest new observation: Irving's sin-vocabulary is event-shaped and clustered, Hawthorne's heart-vocabulary is condition-shaped and diffuse. I would not have articulated this from close reading alone.</li>
+<li><strong>Embeddings</strong> (Category 2) worked best as historical context: they showed that <em>bargain</em> and <em>sin</em> inhabited distant lexical neighborhoods, which is precisely the distance Irving's comedy collapses. They also corrected my assumption about <em>gold</em>.</li>
+<li><strong>SBERT</strong> (Category 3) was best at retrieval-as-provocation: it sent me back to the Esther passage in Hawthorne, which forced me to revise my clean dichotomy.</li>
+</ul>
+<p>Returning to the texts with all three results, my revised claim is: Irving externalizes sin so completely that the story has no interior to damage — which is why the one literal heart in the text (in the apron) can only appear as a grotesque joke. Hawthorne internalizes sin, but — as the Esther passage shows — internalization is not privacy: Brand's inward sin is manufactured <em>by using other people as instruments</em>. So the real contrast is not outside/inside but <strong>two economies of sin</strong>: in Irving, sin circulates like money between a man and the devil; in Hawthorne, sin accumulates like capital inside a man, extracted from other people. The kiln at the end is almost a refinery: it burns off the body and leaves the accumulated substance, marble.</p>
+<h2>8. Limits, Failures, and Next Steps</h2>
+<p>Several things did not work or remain uncertain. First, with two short texts, all frequency observations are fragile; a different segmentation in Voyant changed the shape of the Trends curves, and I chose the default. Second, my reading of &quot;drift&quot; in the HistWords neighbors for <em>sin</em> may be noise; I did not have a principled way to decide how much change in a neighbor list is meaningful. Third, SBERT similarity scores tempted me to treat ranked sentences as &quot;the most relevant passages,&quot; when the ranking reflects my query phrasing as much as the texts; rephrasing Query 2 changed the hit order noticeably. If I continued this project, I would add a third text — Poe's &quot;The Man of the Crowd&quot; as a story of sin with no transaction and no confession at all — and I would test whether the &quot;event-shaped versus condition-shaped&quot; distribution pattern holds across other bargain narratives.</p>
+<h2>9. Workflow Log</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Tool</th>
+<th>What I searched</th>
+<th>Conditions</th>
+<th>Main result</th>
+<th>Passage revisited</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frequency / distribution</td>
+<td>Voyant Tools (Cirrus, Trends)</td>
+<td>top content words; <em>gold</em>, <em>money</em>, <em>devil</em>, <em>heart</em>, <em>fire</em></td>
+<td>2-document corpus (Irving, Hawthorne), default segments, stopwords on</td>
+<td>Irving: <em>gold/money</em> clustered mid-text, <em>devil</em> spikes at end. Hawthorne: <em>heart</em> diffuse across all segments, <em>fire</em> frames start/end</td>
+<td>Irving's negotiation and ending; Hawthorne's kiln framing</td>
+</tr>
+<tr>
+<td>KWIC</td>
+<td>Voyant Tools (Contexts)</td>
+<td><em>heart</em>, <em>soul</em></td>
+<td>per text</td>
+<td><em>heart</em> nearly absent in Irving (apron scene); in Hawthorne attaches to many characters; &quot;withered — contracted — hardened — perished&quot; sequence</td>
+<td>apron scene (Irving); hardened-heart passage (Hawthorne)</td>
+</tr>
+<tr>
+<td>Word vectors (historical)</td>
+<td>HistWords Explorer</td>
+<td><em>bargain</em>, <em>sin</em></td>
+<td>English, early vs. late 19c decades</td>
+<td><em>bargain</em> neighbors purely commercial; <em>sin</em> neighbors theological early, mildly secular later</td>
+<td>Irving's contract phrasing</td>
+</tr>
+<tr>
+<td>Word vectors</td>
+<td>Word Vector Explorer</td>
+<td><em>heart</em>, <em>gold</em></td>
+<td>default model</td>
+<td><em>heart</em> split anatomical/affective; <em>gold</em> neighbors literal metals, no moral terms</td>
+<td>marble-heart ending (Hawthorne)</td>
+</tr>
+<tr>
+<td>Transformer</td>
+<td>SBERT Text Lab</td>
+<td>Q1 &quot;a man agrees to give up his soul in exchange for wealth&quot;; Q2 &quot;a man's heart turns to stone…&quot;; Q2 cross-run</td>
+<td>sentence mode, Top K 5, per-text filter</td>
+<td>Q1: bargain dispersed across negotiation sentences; Q2: surfaced Esther passage; cross-run: Irving answers interiority query with avarice</td>
+<td>Esther passage (Hawthorne); Tom's miserliness (Irving)</td>
+</tr>
+</tbody>
+</table>
+      </article>
+    </main>
+    <footer class="document-footer">
+      <p>DH 2026 | Kohei Furuya | Aoyama Gakuin University</p>
+    </footer>
+  </body>
+</html>
